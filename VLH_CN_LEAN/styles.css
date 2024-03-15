@@ -1,0 +1,39 @@
+.container {
+  width: 80%; /* Độ rộng của container */
+  margin: 0 auto; /* Canh giữa container */
+  display: flex; /* Sử dụng flexbox để căn chỉnh logo và nav cùng hàng */
+  justify-content: space-between; /* Căn logo và nav cách nhau */
+  align-items: center; /* Canh giữa theo chiều dọc */
+}
+
+.logo a {
+  text-decoration: none;
+  color: #333; /* Màu chữ */
+  font-size: 24px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block; /* Hiển thị các mục trong nav cùng hàng */
+  margin-left: 20px; /* Khoảng cách giữa các mục nav */
+  position: relative; /* Thiết lập vị trí tương đối cho mục nav */
+}
+
+nav li:hover .sub-menu {
+  display: block; /* Hiển thị danh sách con khi di chuột qua mục nav */
+}
+
+.sub-menu {
+  display: none; /* Ẩn danh sách con mặc định */
+  position: absolute; /* Thiết lập vị trí tuyệt đối cho danh sách con */
+  background-color: #f9f9f9; /* Màu nền của danh sách con */
+  min-width: 160px; /* Độ rộng tối thiểu của danh sách con */
+  z-index: 1; /* Chỉ số z để danh sách con nằm trên mọi thứ */
+  top: 100%; /* Đặt danh sách con ở phía dưới của mục cha */
+  left: 0; /* Căn danh sách con với mục cha */
+}
